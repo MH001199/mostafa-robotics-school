@@ -57,9 +57,20 @@ To practice both kinds of input before PWM, try the [Uno pushbutton and potentio
 
 ## Project 07 · PWM LED Fade
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Understand digital versus analog behavior and vary an LED duty cycle with PWM.
+
+### Predict
+
+Double the step delay and compare how long the fade takes. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -91,7 +102,7 @@ D6 (PWM) → 220 Ω resistor → LED anode; LED cathode → GND.
 
 Input devices provide data, output devices act on instructions. Uno D0–D13 support digital I/O; A0–A5 are 10-bit ADC inputs and can be GPIO. True DAC: not built into Uno R3. PWM-capable Uno pins: D3,D5,D6,D9,D10,D11. analogWrite(pin,0..255) controls PWM duty cycle, not a true continuous DAC voltage. Duty cycle D = Ton/Tperiod ×100%; average ideal 5V PWM voltage is about D×5 V.
 
-### Build and test — step by step
+### Run
 
 1. Connect the LED to D6 with a current-limiting resistor.
 2. Upload the code.
@@ -111,7 +122,35 @@ Each analogWrite() value changes ON-time proportion of a fast HIGH/LOW waveform.
 
 Continuous fade up and fade down.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/pwm_fade/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Step by 5 and compare the smoothness and time.
+
+### Make
+
+Measure the duty cycle of a few fixed settings with an oscilloscope if available. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/pwm_fade/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Where does the current enter and leave the LED?
+2. What changes when HIGH lasts longer?
+3. Why must the resistor remain in series?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Show the light getting brighter and dimmer and explain what happens at duty command 0 and 255.
+
+### Additional Challenge
 
 Build five distinct brightness steps of 2 seconds each; calculate approximate PWM duty cycles.
 
@@ -123,6 +162,8 @@ LED dimmers; display backlights; PWM inputs on compatible motor drivers.
 
 [Arduino pot och transistor](https://commons.wikimedia.org/wiki/File:Arduino_pot_och_transistor.JPG) — Elderstig. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 06 · AI-Assisted Original Buzzer Melody](02-leds-and-sound.md#original_melody)
 
 **Next** · [Project 08 · LDR Analog Measurements](03-inputs-light-and-climate.md#ldr_reading). You controlled an output with a number. Now measure a changing voltage as a number.
@@ -131,9 +172,20 @@ LED dimmers; display backlights; PWM inputs on compatible motor drivers.
 
 ## Project 08 · LDR Analog Measurements
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Measure light-dependent voltage with a 10 kΩ resistor divider and record readings.
+
+### Predict
+
+Record three readings with the same lighting. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -157,7 +209,7 @@ Connection map for Read ambient light on the Uno R3. Follow connector labels. A 
 
 An LDR typically decreases resistance when light rises. With the LDR on the high side and fixed resistor to ground, A0 voltage increases in bright light. Divider: Vout=Vcc·Rfixed/(RLDR+Rfixed). The Uno ADC reads approximately 0..1023 for the default 0..5 V analog input range. Raw ADC counts are not calibrated lux.
 
-### Build and test — step by step
+### Run
 
 1. Disconnect power, assemble the divider in two breadboard rows.
 2. Check the A0 junction and resistor path carefully.
@@ -178,7 +230,35 @@ analogRead(A0) samples the divider junction; Serial.println() sends counts to th
 
 ADC value decreases when covered and increases when illuminated with this wiring arrangement.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/ldr_reading/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Cover the sensor and compare the readings to a bright condition.
+
+### Make
+
+Change the fixed divider resistor with power off and compare sensitivity across the intended range. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/ldr_reading/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Which node connects to the ADC?
+2. Why can light change the ADC value?
+3. What evidence would justify moving the threshold?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Record dark and bright ADC samples and explain which direction the value moved.
+
+### Additional Challenge
 
 Calculate a candidate light threshold from bright and dark readings. Explain how reversing the voltage divider reverses the direction of readings.
 
@@ -190,6 +270,8 @@ Automatic lighting; environmental data logging; light-seeking robots.
 
 [Sensore crepuscolare con arduino](https://commons.wikimedia.org/wiki/File:Sensore_crepuscolare_con_arduino.jpg) — Magi2774. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 07 · PWM LED Fade](03-inputs-light-and-climate.md#pwm_fade)
 
 **Next** · [Project 09 · LDR Automatic Night Lamp](03-inputs-light-and-climate.md#automatic_night_light). Use your measured bright and dark readings to make a decision.
@@ -198,9 +280,20 @@ Automatic lighting; environmental data logging; light-seeking robots.
 
 ## Project 09 · LDR Automatic Night Lamp
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Use if/else to turn on an LED automatically when surroundings are dark.
+
+### Predict
+
+Predict the state at 499, 500, and 501. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -232,7 +325,7 @@ LDR divider: 5V → LDR → A0 → 10 kΩ → GND. LED: D6 → 220 Ω → LED an
 
 Compare sensor readings against a threshold chosen from the previous project. if(condition) runs one block when true, else runs the alternative. A value of 500 is an example and must be calibrated for the physical LDR and room.
 
-### Build and test — step by step
+### Run
 
 1. Keep the LDR divider from Project 08.
 2. Add an LED on D6 with its own resistor.
@@ -253,7 +346,35 @@ Lower reading = darker environment with this divider; the program makes a basic 
 
 Lamp ON in the dark, OFF in bright light.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/automatic_night_light/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Calibrate the threshold for your room.
+
+### Make
+
+Add separate on and off thresholds and explain hysteresis. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/automatic_night_light/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Which node connects to the ADC?
+2. Why can light change the ADC value?
+3. What evidence would justify moving the threshold?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Show both lamp states and record the ADC reading at the transition.
+
+### Additional Challenge
 
 Add a second LED for bright conditions, or implement two thresholds for stable switching.
 
@@ -265,6 +386,8 @@ Automatic night lights; automatic streetlight control models; energy-saving ligh
 
 [Automatic night light using Arduino and LDR](https://robozx.com/blog/automatic-night-light-using-arduino-and-photoresistor-sensor-ldr) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 08 · LDR Analog Measurements](03-inputs-light-and-climate.md#ldr_reading)
 
 **Next** · [Project 10 · DHT11 Temperature and Humidity](03-inputs-light-and-climate.md#dht11_reading). Keep the threshold idea and learn to read a digital sensor that reports two values.
@@ -273,9 +396,20 @@ Automatic night lights; automatic streetlight control models; energy-saving ligh
 
 ## Project 10 · DHT11 Temperature and Humidity
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Learn sensor libraries and read digital temperature/humidity data.
+
+### Predict
+
+Identify the temperature and relative humidity fields in the monitor. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -303,7 +437,7 @@ For a bare four-pin DHT11 with the grille toward you and pins down, wire left to
 
 DHT11 communicates using a sensor-specific timed digital protocol, not I2C. Use DHT sensor library by Adafruit plus Adafruit Unified Sensor. readTemperature() returns Celsius; readHumidity() returns percentage relative humidity; isnan() identifies failed measurements. DHT11 should generally be sampled no faster than once every 2 seconds.
 
-### Build and test — step by step
+### Run
 
 1. Install DHT library and Unified Sensor dependency using Library Manager.
 2. Power off and connect the correct pin order.
@@ -325,7 +459,35 @@ DHT dht(...) creates a sensor object; dht.begin() initializes; both readings are
 
 Readable temperature in °C and relative humidity in %RH about every 2 seconds.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/dht11_reading/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Log five readings at different times without touching or wetting the sensor.
+
+### Make
+
+Count consecutive invalid samples and report once when readings recover. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/dht11_reading/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. What are the two reported units?
+2. How do you recognize a failed reading?
+3. Why do you need a sampling interval?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Capture two valid measurements and identify their units. Point to the pull-up if your sensor is bare.
+
+### Additional Challenge
 
 Document 5 sets of measurements and identify possible causes of inaccurate or missing readings.
 
@@ -341,6 +503,8 @@ The DHT11 is a low-cost educational sensor and is not a precision or safety-crit
 
 [Arduino uno dht11](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg) — Edwiyanto. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 09 · LDR Automatic Night Lamp](03-inputs-light-and-climate.md#automatic_night_light)
 
 **Next** · [Project 11 · Temperature / Humidity Buzzer Alarm](03-inputs-light-and-climate.md#dht11_alarm). Use valid readings and thresholds to decide when the piezo should sound.
@@ -349,9 +513,20 @@ The DHT11 is a low-cost educational sensor and is not a precision or safety-crit
 
 ## Project 11 · Temperature / Humidity Buzzer Alarm
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Use OR logic and a passive buzzer to respond to environmental thresholds.
+
+### Predict
+
+Predict the alarm for 29 °C and 76% RH. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -379,7 +554,7 @@ Reuse the DHT11 on D2 from Project 10. Connect D3 → 330 Ω resistor → the po
 
 The conditional temperature>=30.0 || humidity>=75.0 becomes true if either threshold is exceeded. && would require both. This is only a classroom alert, not a safety-certified alarm.
 
-### Build and test — step by step
+### Run
 
 1. Retain DHT11 wiring.
 2. Add passive piezo buzzer on D3.
@@ -401,7 +576,35 @@ The conditional temperature>=30.0 || humidity>=75.0 becomes true if either thres
 
 Continuous beep when either demo threshold is reached, silent otherwise.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/dht11_alarm/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Test both outcomes by altering one threshold around ambient conditions.
+
+### Make
+
+Add a difference between the alarm-on and alarm-off thresholds. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/dht11_alarm/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. What are the two reported units?
+2. How do you recognize a failed reading?
+3. Why do you need a sampling interval?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Demonstrate both outcomes using thresholds near ambient and record the measured values.
+
+### Additional Challenge
 
 Create three states: normal / temperature warning / humidity warning, using different buzzer patterns.
 
@@ -413,6 +616,8 @@ Environment alarms; demonstrator of conditional decision logic.
 
 [DHT11 temperature and humidity buzzer alert](https://projecthub.arduino.cc/arduino_buzz/temperature-and-humidity-monitor-using-dht11-oled-rgb-led-and-buzzer-589f14) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 10 · DHT11 Temperature and Humidity](03-inputs-light-and-climate.md#dht11_reading)
 
 **Next** · [Project 12 · Combined Light and Climate System](03-inputs-light-and-climate.md#light_and_climate). Combine the night light and climate alarm while keeping their readings visible.
@@ -421,9 +626,20 @@ Environment alarms; demonstrator of conditional decision logic.
 
 ## Project 12 · Combined Light and Climate System
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Run an automatic lamp and an independent environmental warning using one sketch.
+
+### Predict
+
+Cover the LDR without changing the climate thresholds. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -457,7 +673,7 @@ LDR divider at A0 (5V → LDR → A0 junction → 10 kΩ → GND). DHT11 DATA go
 
 Combining sensors means distinct variables and independent decisions. LDR is an analog voltage; DHT11 is digital protocol data. The two tasks share a controller but need not depend on each other.
 
-### Build and test — step by step
+### Run
 
 1. Begin with each previously tested subcircuit.
 2. Merge ground rails and confirm each 5V module is rated for 5V.
@@ -479,7 +695,35 @@ The ternary condition ? HIGH : LOW is a short way to choose one of two digital s
 
 Covering LDR controls LED; DHT threshold controls buzzer; both operate on one Arduino.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/light_and_climate/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Find the slowest change you notice in the lamp when room light changes.
+
+### Make
+
+Use millis() to sample the lamp faster while preserving the DHT interval. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/light_and_climate/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Which node connects to the ADC?
+2. Why can light change the ADC value?
+3. What evidence would justify moving the threshold?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Cover the LDR and vary a threshold separately. Report which actuator each change affects.
+
+### Additional Challenge
 
 Add a status LED or refactor both operations into separate named functions.
 
@@ -490,6 +734,8 @@ Combined home sensors; environmental and lighting integration; small control pan
 ### Real build / practical application photo
 
 [Light and temperature sensor integration example](https://docs.sunfounder.com/projects/breadvolt/en/latest/projects/r4_project.html) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
+
+### Continue Learning
 
 **Previous** · [Project 11 · Temperature / Humidity Buzzer Alarm](03-inputs-light-and-climate.md#dht11_alarm)
 

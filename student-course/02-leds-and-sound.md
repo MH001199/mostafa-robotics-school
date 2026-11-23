@@ -16,9 +16,20 @@ Begin with the light already on the Uno. Move the same output signal onto a brea
 
 ## Project 01 · Hello World: Built-in LED
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the Section 00 assessment.
 
 Upload your first program and observe digital output.
+
+### Predict
+
+Predict the period if only the first wait changes to 100 ms. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -42,7 +53,7 @@ No external wiring. Connect the Uno to the computer by a USB data cable.
 
 The built-in LED connects to D13 on the Uno. LED_BUILTIN identifies this pin. Digital HIGH and LOW control the output; 500 milliseconds is half a second.
 
-### Build and test — step by step
+### Run
 
 1. Open Arduino IDE and select Arduino Uno.
 2. Select the correct port.
@@ -63,7 +74,35 @@ pinMode() configures D13; digitalWrite() changes output state; delay(500) waits 
 
 LED stays ON for 0.5 s, OFF for 0.5 s; about one full cycle per second.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/builtin_blink/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Make a short heartbeat flash once per second.
+
+### Make
+
+Rewrite it with millis() and keep the same measured period. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/builtin_blink/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Which statements run once and which repeat?
+2. Which two values determine the blink period?
+3. How can you distinguish the L indicator from the power LED?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Time three full cycles. Record the measured average and compare it with the two programmed waits.
+
+### Additional Challenge
 
 Change the ON duration to 2000 ms and the OFF duration to 1000 ms. Calculate the full cycle length.
 
@@ -75,17 +114,30 @@ Device heartbeat indicators; microcontroller smoke testing; troubleshooting uplo
 
 [Arduino uno led on](https://commons.wikimedia.org/wiki/File:Arduino_uno_led_on.jpg) — Edwiyanto. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
-**Previous** · [Board, IDE and code](01-board-and-ide.md)
+### Continue Learning
 
-**Next** · [Section 00 · What Is a Breadboard and How Does It Work?](../Class-01-Arduino-Fundamentals/00-Introduction/README.md). Find out which holes are connected before wiring the first external LED.
+**Previous** · [Section 00 Beginner Assessment](../Class-01-Arduino-Fundamentals/00-Introduction/README.md#assessment)
+
+**Next** · [External breadboard LED](02-leds-and-sound.md#external_led). Apply the breadboard groups you learned in Section 00.
 
 <a id="external_led"></a>
 
 ## Project 02 · External LED and Breadboard
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Reproduce the blink circuit with a real LED and current-limiting resistor.
+
+### Predict
+
+Predict what removing the resistor would do. Keep it installed. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -117,7 +169,7 @@ D13 → 220 Ω resistor → LED anode (+, usually long leg); LED cathode (−, f
 
 A breadboard connects holes internally by strips; an LED is a diode and needs correct polarity and current limiting. Example current: (5 V − 2 V)/220 Ω ≈ 13.6 mA, subject to the actual LED forward voltage.
 
-### Build and test — step by step
+### Run
 
 1. Unplug USB before moving wires.
 2. Insert the LED across electrically separate breadboard rows.
@@ -138,7 +190,35 @@ D13 is an electrical output pin, so one sketch can control the on-board LED and 
 
 External LED blinks as the board LED blinks.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/external_led/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Move the wire and pin constant to D8 with power disconnected and explain why the onboard LED no longer follows.
+
+### Make
+
+Compare brightness with a 330 Ω resistor and calculate approximate current. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/external_led/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Where does the current enter and leave the LED?
+2. What changes when HIGH lasts longer?
+3. Why must the resistor remain in series?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Verify that both LEDs follow the expected timing. Point to the series resistor and the GND return.
+
+### Additional Challenge
 
 Try 100 ms ON and 900 ms OFF. Why does reversing LED polarity stop the normal light emission?
 
@@ -150,6 +230,8 @@ Indicator lamps; machine-state LEDs; visible confirmation of control logic.
 
 [20140922 122126 resized](https://commons.wikimedia.org/wiki/File:20140922_122126_resized.jpg) — NathanMinnick58. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 01 · Hello World: Built-in LED](02-leds-and-sound.md#builtin_blink)
 
 **Next** · [Project 03 · LED Timing Patterns](02-leds-and-sound.md#led_timing). Reuse the same circuit and use a loop to create a repeating pattern.
@@ -158,9 +240,20 @@ Indicator lamps; machine-state LEDs; visible confirmation of control logic.
 
 ## Project 03 · LED Timing Patterns
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Create a repeating sequence of short and long flashes using a for loop.
+
+### Predict
+
+Count how many HIGH writes each cycle makes. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -192,7 +285,7 @@ D13 → 220 Ω → LED anode; LED cathode → GND (same circuit as Project 02).
 
 for (initialization; condition; update) repeats a block a fixed number of times; delay() controls timing but blocks other actions.
 
-### Build and test — step by step
+### Run
 
 1. Retain the LED circuit from Project 02.
 2. Upload the new program.
@@ -213,7 +306,35 @@ i++ increases loop counter by one; the loop runs when i is 0, 1 and 2. The timin
 
 Three 150 ms flashes followed by a pause and one 1 s flash.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/led_timing/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Change only the loop limit and predict the new pattern.
+
+### Make
+
+Store the pattern as durations and replace the fixed sequence. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/led_timing/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Where does the current enter and leave the LED?
+2. What changes when HIGH lasts longer?
+3. Why must the resistor remain in series?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Record the number of short flashes, the long flash, and how their durations compare.
+
+### Additional Challenge
 
 Create an SOS-inspired distinct pattern using short and long flashes; document your own timing rather than copying another sketch.
 
@@ -225,6 +346,8 @@ Warning beacons; machine fault codes; equipment status patterns.
 
 [Arduino LED project](https://commons.wikimedia.org/wiki/File:Arduino_LED_project.jpg) — Randy / ConzNL. License: CC BY 2.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 02 · External LED and Breadboard](02-leds-and-sound.md#external_led)
 
 **Next** · [Project 04 · Three-LED Traffic Light](02-leds-and-sound.md#traffic_light). Use the timing pattern to sequence three separate outputs.
@@ -233,9 +356,20 @@ Warning beacons; machine fault codes; equipment status patterns.
 
 ## Project 04 · Three-LED Traffic Light
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Control three independent digital outputs through a safe repeating sequence.
+
+### Predict
+
+Increase yellow by one second and predict the full cycle time. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -267,7 +401,7 @@ D8 → resistor → Red anode; D9 → resistor → Yellow anode; D10 → resisto
 
 Every LED needs its own resistor. Multiple pins can drive independent outputs, and timed conditions can model a simple traffic controller. This is a classroom simulation, not a road-safety certified controller.
 
-### Build and test — step by step
+### Run
 
 1. Disconnect power.
 2. Insert three LEDs in separate breadboard rows.
@@ -288,7 +422,35 @@ Red means Stop (5 s), green means Go (5 s), yellow means Prepare to stop (2 s). 
 
 Red 5 s → green 5 s → yellow 2 s → repeat.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/traffic_light/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Add an all-red pause and record all output states.
+
+### Make
+
+Represent the phases with a state variable and millis(). Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/traffic_light/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Why does each LED have its own resistor?
+2. How would you check that only one lamp is active?
+3. Which line controls the phase duration?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Observe at least one whole cycle and record the order and duration of all three states.
+
+### Additional Challenge
 
 Main assignment: red 4 s; green 6 s; green blink 3 times; yellow 2 s. Extension: add a pedestrian pushbutton and a pedestrian LED.
 
@@ -300,6 +462,8 @@ Intersection-control teaching; sequential machines; factory status light models.
 
 [Traffic Lights, Arduino](https://commons.wikimedia.org/wiki/File:Traffic_Lights%2C_Arduino.jpg) — Khaifuture. License: CC BY-SA 3.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 03 · LED Timing Patterns](02-leds-and-sound.md#led_timing)
 
 **Next** · [Project 05A · Active Buzzer Alarm](02-leds-and-sound.md#active_buzzer). Reuse the idea of switching a pin HIGH and LOW to drive an audible indicator.
@@ -308,9 +472,20 @@ Intersection-control teaching; sequential machines; factory status light models.
 
 ## Project 05A · Active Buzzer Alarm
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Replace a light output with an audible output to reinforce digital ON/OFF control.
+
+### Predict
+
+Change the cadence without changing the oscillator pitch. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -336,7 +511,7 @@ Bare low-current 2-pin active buzzer: D8 → buzzer +, GND → buzzer − only i
 
 An active buzzer has an internal oscillator and makes a fixed tone when powered. It is a digital output example; it usually cannot play musical notes by changing the DC state alone.
 
-### Build and test — step by step
+### Run
 
 1. Confirm the buzzer is active and its operating voltage/current.
 2. Wire it using the package-specific instructions.
@@ -357,7 +532,35 @@ digitalWrite(HIGH) supplies an active-high module signal; LOW turns it off. Some
 
 One beep every second with alternating 0.5-second sound and silence.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/active_buzzer/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Make a two-beep pattern separated by a longer pause.
+
+### Make
+
+Design an enable flag and justify the default state on reset. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/active_buzzer/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Where is the tone produced?
+2. Which pins supply power and which pin commands it?
+3. What happens when the signal goes LOW?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Measure one on and off interval and explain where the fixed pitch is generated.
+
+### Additional Challenge
 
 Create a double-beep pattern and explain when an audible alarm might be preferable to an LED.
 
@@ -369,6 +572,8 @@ Access confirmation; notifications; door and equipment alarms.
 
 [Arduino Uno buzzer breadboard project](https://startingelectronics.org/articles/arduino/connecting-buzzer-arduino-uno/) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 04 · Three-LED Traffic Light](02-leds-and-sound.md#traffic_light)
 
 **Next** · [Project 05B · Passive Buzzer Tones](02-leds-and-sound.md#passive_tones). Compare a buzzer that has an oscillator with a passive piezo that needs a frequency.
@@ -377,9 +582,20 @@ Access confirmation; notifications; door and equipment alarms.
 
 ## Project 05B · Passive Buzzer Tones
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Generate pitches by changing electrical oscillation frequency.
+
+### Predict
+
+Change 262 Hz to 330 Hz and predict the pitch difference. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -405,7 +621,7 @@ D8 → 330 Ω resistor → passive piezo positive lead. Connect its negative lea
 
 An unpowered passive piezo needs an alternating signal. tone(pin, frequency) generates a square wave; noTone(pin) stops it. The units are hertz (Hz).
 
-### Build and test — step by step
+### Run
 
 1. Disconnect active buzzer and wire the passive type.
 2. Check the module signal current.
@@ -425,7 +641,35 @@ Approximate pitches: C4=262 Hz, E4=330 Hz, G4=392 Hz, C5=523 Hz. Pitch depends o
 
 Four ascending musical notes, followed by silence, repeat.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/passive_tones/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Insert a timed rest using noTone and delay.
+
+### Make
+
+Build a note-and-duration table and loop over it. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/passive_tones/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. What unit is frequency specified in?
+2. Which argument or wait sets duration?
+3. How can you deliberately produce silence?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Identify the four-tone order and the silent gap. Explain what ends the sound.
+
+### Additional Challenge
 
 Make two different alarm sounds, one slow and low-pitched, one fast and high-pitched.
 
@@ -437,6 +681,8 @@ Timers; games; UI feedback; sound notification design.
 
 [Arduino circuit with speaker, LEDs, protoboard and jumpers](https://commons.wikimedia.org/wiki/File:Arduino_circuit_with_speaker%2C_LEDs%2C_protoboard_and_jumpers.jpg) — GlauberSantiagoUFSCar. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 05A · Active Buzzer Alarm](02-leds-and-sound.md#active_buzzer)
 
 **Next** · [Project 06 · AI-Assisted Original Buzzer Melody](02-leds-and-sound.md#original_melody). Turn separate tone calls into an original sequence of notes.
@@ -445,9 +691,20 @@ Timers; games; UI feedback; sound notification design.
 
 ## Project 06 · AI-Assisted Original Buzzer Melody
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Use AI as a programming assistant while understanding and checking every line of code.
+
+### Predict
+
+Change one duration while keeping both arrays the same length. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -473,7 +730,7 @@ D8 → 330 Ω resistor → passive piezo positive lead. Connect its negative lea
 
 An integer array stores note frequencies and a parallel array stores durations. A for loop plays notes in order. Use only original or licensed tunes in publicly shared lesson repositories.
 
-### Build and test — step by step
+### Run
 
 1. Explain notes[], durations[], and array indices.
 2. Ask an AI assistant for an original eight-note melody for Arduino Uno and a passive piezo buzzer on D8.
@@ -494,7 +751,35 @@ sizeof(notes)/sizeof(notes[0]) counts notes. Pairing notes and durations produce
 
 An eight-note original melody repeated after a short pause.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/original_melody/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Ask AI for eight original frequency and duration pairs. Verify the proposed values and replace only the arrays.
+
+### Make
+
+Store note and duration together in a struct to prevent mismatched lengths. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/original_melody/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. What unit is frequency specified in?
+2. Which argument or wait sets duration?
+3. How can you deliberately produce silence?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Play your changed phrase and compare its rhythm with your frequency and duration table.
+
+### Additional Challenge
 
 Create an original ten-note tune with at least 3 pitches and 2 durations. Add comments and explain every AI-generated modification.
 
@@ -505,6 +790,8 @@ Interactive doorbells; accessible interfaces; game sounds and feedback.
 ### Real build / practical application photo
 
 [Arduino buzzer melody project](https://projecthub.arduino.cc/hibit/play-christmas-melody-with-arduino-and-a-buzzer-ef33dc) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
+
+### Continue Learning
 
 **Previous** · [Project 05B · Passive Buzzer Tones](02-leds-and-sound.md#passive_tones)
 
