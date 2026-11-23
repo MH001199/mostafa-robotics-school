@@ -1,6 +1,6 @@
 # Image sources
 The wiring diagrams in [lesson-visuals](lesson-visuals/) are original to Mostafa’s Robotics School. The connection rows are drawn from the school’s Uno R3 pin maps and checked against the matching sketches. The breadboard illustrations are original drawings based on the [SparkFun breadboard guide](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all).
-The following photographs are embedded unmodified from the original upload. Only display width changes. CC BY-SA requires credit, a source and license link, and a change notice if adapted. Adaptations must use the same or a compatible license.
+The following photographs are embedded from repository copies of the original files. Only display width changes. The DHT11 photograph is linked to its original source. CC BY-SA requires credit, a source and license link, and a change notice if adapted. Adaptations must use the same or a compatible license.
 | Embedded photograph | Creator | License | Use |
 | --- | --- | --- | --- |
 | [Electronics-White-Breadboard.jpg](https://commons.wikimedia.org/wiki/File:Electronics-White-Breadboard.jpg) | Evan-Amos | Public domain | Solderless breadboard with terminal holes and side power rails |
@@ -8,7 +8,7 @@ The following photographs are embedded unmodified from the original upload. Only
 | [Arduino_Uno_with_breadboard.jpg](https://commons.wikimedia.org/wiki/File:Arduino_Uno_with_breadboard.jpg) | Thctamm | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | Arduino Uno with a breadboard, jumper wires and resistors |
 | [Electronic-Component-Red-LED.jpg](https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg) | Evan-Amos | Public domain | Two-lead through-hole red LED |
 | [Electronic-Axial-Lead-Resistors-Array.jpg](https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg) | Evan-Amos | Public domain | Axial resistors with colored bands |
-| [Arduino_uno_dht11.jpg](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg) | Edwiyanto | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Uno and a DHT11 sensor in a separate demonstration |
+| [Arduino_uno_dht11.jpg](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg) | Edwiyanto | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | Uno and a DHT11 sensor in a separate demonstration (link only) |
 
 ## Linked photographs and references
 
