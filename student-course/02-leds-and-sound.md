@@ -24,6 +24,16 @@ Upload your first program and observe digital output.
 
 Arduino Uno R3; USB data cable; computer with Arduino IDE. No breadboard.
 
+### See the components and circuit
+
+[Uno R3 board and downloadable pinout](https://docs.arduino.cc/hardware/uno-rev3/) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Built-in Blink](../lesson-visuals/builtin_blink.svg)
+
+Connection map for Built-in Blink on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/builtin_blink.svg) · [Arduino sketch](sketches/builtin_blink/builtin_blink.ino) · [Detailed notes and engineering questions](sketches/builtin_blink/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 No external wiring. Connect the Uno to the computer by a USB data cable.
@@ -67,7 +77,7 @@ Device heartbeat indicators; microcontroller smoke testing; troubleshooting uplo
 
 **Previous** · [Board, IDE and code](01-board-and-ide.md)
 
-**Next** · [Project 02 · External LED and Breadboard](02-leds-and-sound.md#external_led). Take the output off the board and build a complete current path through an external LED.
+**Next** · [Section 00 · What Is a Breadboard and How Does It Work?](../Class-01-Arduino-Fundamentals/00-Introduction/README.md). Find out which holes are connected before wiring the first external LED.
 
 <a id="external_led"></a>
 
@@ -80,6 +90,24 @@ Reproduce the blink circuit with a real LED and current-limiting resistor.
 ### Components and module names
 
 Arduino Uno; breadboard; red LED; one 220–330 Ω resistor; jumper wires; USB cable.
+
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for External breadboard LED](../lesson-visuals/external_led.svg)
+
+Connection map for External breadboard LED on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/external_led.svg) · [Arduino sketch](sketches/external_led/external_led.ino) · [Detailed notes and engineering questions](sketches/external_led/NOTES.md)
 
 ### Exact wiring (power OFF first)
 
@@ -138,6 +166,24 @@ Create a repeating sequence of short and long flashes using a for loop.
 
 Arduino Uno; external LED; 220 Ω resistor; breadboard and jumpers.
 
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for LED timing patterns](../lesson-visuals/led_timing.svg)
+
+Connection map for LED timing patterns on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/led_timing.svg) · [Arduino sketch](sketches/led_timing/led_timing.ino) · [Detailed notes and engineering questions](sketches/led_timing/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 D13 → 220 Ω → LED anode; LED cathode → GND (same circuit as Project 02).
@@ -195,6 +241,24 @@ Control three independent digital outputs through a safe repeating sequence.
 
 Arduino Uno; red, yellow, green LEDs; three 220–330 Ω resistors; breadboard; jumpers.
 
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for Three LED traffic light](../lesson-visuals/traffic_light.svg)
+
+Connection map for Three LED traffic light on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/traffic_light.svg) · [Arduino sketch](sketches/traffic_light/traffic_light.ino) · [Detailed notes and engineering questions](sketches/traffic_light/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 D8 → resistor → Red anode; D9 → resistor → Yellow anode; D10 → resistor → Green anode; all three LED cathodes → GND.
@@ -251,6 +315,16 @@ Replace a light output with an audible output to reinforce digital ON/OFF contro
 ### Components and module names
 
 Arduino Uno; low-current, 5 V-rated active buzzer or a matching active buzzer module; jumper wires.
+
+### See the components and circuit
+
+[Active buzzer and module photos](https://startingelectronics.org/articles/arduino/connecting-buzzer-arduino-uno/) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Active buzzer alarm](../lesson-visuals/active_buzzer.svg)
+
+Connection map for Active buzzer alarm on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/active_buzzer.svg) · [Arduino sketch](sketches/active_buzzer/active_buzzer.ino) · [Detailed notes and engineering questions](sketches/active_buzzer/NOTES.md)
 
 ### Exact wiring (power OFF first)
 
@@ -311,6 +385,16 @@ Generate pitches by changing electrical oscillation frequency.
 
 Arduino Uno; small low-current passive piezo element/module; jumper wires; transistor if required by buzzer current.
 
+### See the components and circuit
+
+[Passive piezo transducer product photos](https://www.adafruit.com/product/160) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Passive piezo musical notes](../lesson-visuals/passive_tones.svg)
+
+Connection map for Passive piezo musical notes on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/passive_tones.svg) · [Arduino sketch](sketches/passive_tones/passive_tones.ino) · [Detailed notes and engineering questions](sketches/passive_tones/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 Use a 5 V-compatible high-impedance passive piezo element. Add a 330 Ω series resistor from D8 to the piezo. A magnetic buzzer or a low-impedance speaker needs a separate driver. [Arduino tone reference](https://docs.arduino.cc/language-reference/en/functions/advanced-io/tone/)
@@ -368,6 +452,16 @@ Use AI as a programming assistant while understanding and checking every line of
 ### Components and module names
 
 Arduino Uno; passive piezo buzzer; jumper wires. Same wiring as Project 05B.
+
+### See the components and circuit
+
+[Passive piezo transducer product photos](https://www.adafruit.com/product/160) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Create an original melody with AI](../lesson-visuals/original_melody.svg)
+
+Connection map for Create an original melody with AI on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/original_melody.svg) · [Arduino sketch](sketches/original_melody/original_melody.ino) · [Detailed notes and engineering questions](sketches/original_melody/NOTES.md)
 
 ### Exact wiring (power OFF first)
 

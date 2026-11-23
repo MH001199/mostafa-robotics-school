@@ -4,6 +4,12 @@
 
 Start with the Uno R3 and a USB data cable. At the end of this page you should be able to find the pins, select the board and port, and explain how a sketch runs.
 
+<a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_dllu.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Arduino_Uno_dllu.jpg" width="420" alt="Arduino Uno with its long digital and analog headers"></a>
+
+*Arduino Uno with its long digital and analog headers · Dllu · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
+Use the published pinout to identify D13, 5V, GND, and the analog headers on your own board. [Arduino Uno R3 pinout](https://docs.arduino.cc/hardware/uno-rev3/)
+
 ## Learning objectives
 
 Students finish this class able to identify Arduino hardware, install/configure Arduino IDE, understand program flow and the most common code structures, and build working LED/traffic-light/buzzer circuits before solving small assignments without copying a full solution.
@@ -51,7 +57,7 @@ Troubleshooting: No port? Check cable and drivers (some clones use CH340). Uploa
 
 A beginner Arduino sketch has three areas: global definitions and #include at the top, setup() once after startup, and loop() repeatedly. Describe it as GLOBAL DEFINITIONS → SETUP ONCE → LOOP → LOOP → LOOP. It is a mental learning aid, not literally executing every global declaration on each iteration.
 
-[Open the annotated sketch structure](sketches/sketch_structure/sketch_structure.ino). `Wire.h` and `SPI.h` come with the AVR board platform. Install additional libraries through Library Manager when a lesson calls for one.
+[Open the annotated sketch structure](sketches/sketch_structure/sketch_structure.ino) or [read its detailed notes](sketches/sketch_structure/NOTES.md). `Wire.h` and `SPI.h` come with the AVR board platform. Install additional libraries through Library Manager when a lesson calls for one.
 
 `int` holds whole numbers, `float` can hold fractions, `bool` holds true or false, and `char` holds one character. Use `const` for a value you do not plan to change. A function groups instructions and can take arguments. Braces delimit a block, a semicolon ends a statement, and `//` starts a comment. Use `=` to assign and `==` to compare. A `for` loop repeats a block, and `if` runs a block when its condition is true. Put hardware configuration such as `pinMode()` in `setup()`.
 
