@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 1](../README.md)
 
-[Open the sketch](blink/blink.ino)
+### See the components and circuit
+
+[Uno R3 board and downloadable pinout](https://docs.arduino.cc/hardware/uno-rev3/) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Built-in Blink](../../lesson-visuals/alternate-blink.svg)
+
+Connection map for Built-in Blink on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-blink.svg) · [Arduino sketch](blink/blink.ino) · [Detailed notes and engineering questions](blink/NOTES.md)
 
 Use an Arduino Uno R3, a USB **data** cable, and a computer. Leave every header empty.
 
