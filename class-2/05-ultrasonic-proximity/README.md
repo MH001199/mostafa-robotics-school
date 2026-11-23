@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
-[Open the sketch](proximity_buzzer/proximity_buzzer.ino)
+### See the components and circuit
+
+[Ultrasonic module photos](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Ultrasonic proximity buzzer](../../lesson-visuals/alternate-proximity_buzzer.svg)
+
+Connection map for Ultrasonic proximity buzzer on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-proximity_buzzer.svg) · [Arduino sketch](proximity_buzzer/proximity_buzzer.ino) · [Detailed notes and engineering questions](proximity_buzzer/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 
