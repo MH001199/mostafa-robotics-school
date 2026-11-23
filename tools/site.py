@@ -107,9 +107,14 @@ def check(paths):
 
 
 def stage(paths, destination):
+    # Avoid a file/directory collision with the page generated from LICENSE.md.
+    renamed = {destination / "README.md": "index.md",
+               destination / "LICENSE": "LICENSE.txt"}
     for source in paths:
         relative = source.relative_to(ROOT)
         out = destination / relative
+        if out in renamed:
+            out = out.with_name(renamed[out])
         out.parent.mkdir(parents=True, exist_ok=True)
         if source.suffix != ".md":
             out.write_bytes(source.read_bytes())
@@ -128,9 +133,6 @@ def stage(paths, destination):
         if source.name == "IMAGE-SOURCES.md":
             text = text.replace("[lesson-visuals](lesson-visuals/)", "the lesson-visuals directory")
         out.write_text(text, encoding="utf-8")
-    # Rename only the generated root document so the website opens at index.html.
-    initial = destination / "README.md"
-    initial.rename(destination / "index.md")
     for markdown in destination.rglob("*.md"):
         text = markdown.read_text(encoding="utf-8")
 
@@ -140,9 +142,9 @@ def stage(paths, destination):
             if url.scheme or url.netloc or not url.path:
                 return match[0]
             source_target = (markdown.parent / unquote(url.path)).resolve()
-            if source_target != initial:
+            if source_target not in renamed:
                 return match[0]
-            return match[0].replace(href, href.replace("README.md", "index.md", 1))
+            return match[0].replace(href, href.replace(source_target.name, renamed[source_target], 1))
 
         markdown.write_text(MARKDOWN_LINK.sub(root_links, text), encoding="utf-8")
 
