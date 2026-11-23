@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
-[Open the sketch](digital_analog_io/digital_analog_io.ino)
+### See the components and circuit
+
+[Tactile switch photos](https://www.adafruit.com/product/367) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Digital and analog I/O](../../lesson-visuals/alternate-digital_analog_io.svg)
+
+Connection map for Digital and analog I/O on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-digital_analog_io.svg) · [Arduino sketch](digital_analog_io/digital_analog_io.ino) · [Detailed notes and engineering questions](digital_analog_io/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 
