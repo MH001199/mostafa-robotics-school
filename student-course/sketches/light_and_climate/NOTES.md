@@ -20,11 +20,11 @@ The photoresistor decreases in resistance under brighter light. A 10 kΩ resisto
 
 The indicator LED emits light when current flows from anode to cathode. The 220 Ω resistor limits current in the same path.
 
-<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../../../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
 
 *Two-lead through-hole red LED · Evan-Amos · Public domain.*
 
-<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../../../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
 
 *Axial resistors with colored bands · Evan-Amos · Public domain.*
 
@@ -34,7 +34,7 @@ Use the resistance specified in the wiring table. Verify unfamiliar color bands 
 
 The sensor measures air temperature and relative humidity and transmits a timed digital message. A bare sensor needs a data pull-up.
 
-<a href="https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Arduino_uno_dht11.jpg" width="300" alt="Uno and a DHT11 sensor in a separate demonstration"></a>
+[Uno and a DHT11 sensor in a separate demonstration](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg)
 
 *Uno and a DHT11 sensor in a separate demonstration · Edwiyanto · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
 
