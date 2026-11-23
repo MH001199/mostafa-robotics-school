@@ -2,6 +2,21 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
+> **Optional hardware variation.** Follow this page with its own sketch and pin map. [Section 00](../../Class-01-Arduino-Fundamentals/00-Introduction/README.md) applies to both kits.
+
+### Learning Objectives
+
+Prerequisite: complete Section 00 and the previous linked lesson. In this lesson, explain and demonstrate near-object alerts.
+
+### Predict
+
+Predict if a 0 cm timeout will sound. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
+
 ### See the components and circuit
 
 [Ultrasonic module photos](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors) · Use the source to identify the part and then follow the wiring map below.
@@ -11,6 +26,10 @@
 Connection map for Ultrasonic proximity buzzer on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
 
 [Wiring diagram](../../lesson-visuals/alternate-proximity_buzzer.svg) · [Arduino sketch](proximity_buzzer/proximity_buzzer.ino) · [Detailed notes and engineering questions](proximity_buzzer/NOTES.md)
+
+### Run
+
+Using the matching sketch above, select **Arduino Uno**, Verify, then Upload. Check for this behavior: 9600 baud. A valid target at ≤20 cm gives short beeps. Invalid echo is silent.
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 
@@ -34,6 +53,37 @@ The Arduino sends a 10 μs trigger. It times the return pulse using `pulseIn()` 
 **If it fails.** Confirm TRIG and ECHO are on separate, correct pins. Use a broad flat target perpendicular to the sensor. A target inside the blind zone may yield an invalid reading.
 
 [HC-SR04 datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
+
+
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](proximity_buzzer/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Compare readings and beep behavior at 15, 20 and 40 cm.
+
+### Make
+
+Log the fraction of failed echoes for targets of different materials. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](proximity_buzzer/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Why divide the travel distance by two?
+2. Why should a timeout be handled separately?
+3. What happens to the echo from an angled target?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Demonstrate the expected behavior above. Capture one timed, measured, or serial observation, and explain which line or connection caused it.
+
+### Continue Learning
 
 Previous · [DHT22 temperature and humidity alarm](../../class-2/04-dht-alarm/README.md)
 
