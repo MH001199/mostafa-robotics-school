@@ -14,7 +14,7 @@ From the repository root on macOS, Linux, or Git Bash:
 
 ```sh
 set -e
-for sketch in class-1/*/*/*.ino class-2/*/*/*.ino; do
+for sketch in class-1/*/*/*.ino class-2/*/*/*.ino student-course/sketches/*/*.ino; do
   arduino-cli compile --fqbn arduino:avr:uno --warnings all "${sketch%/*}"
 done
 ```
@@ -23,6 +23,6 @@ Alternatively, open any sketch in Arduino IDE, select **Arduino Uno**, and click
 
 ## Bench checks
 
-All 12 sketches compiled for the Uno R3 with the versions above. The Arduino AVR core emitted unused-parameter warnings in its own `new.cpp` on the first build. Physical bench testing remains to be done.
+The 12 DHT22/TB6612FNG route sketches compiled for the Uno R3 with Arduino CLI. The 19 full-course sketches, including the annotated setup example, were compiled and linked for the ATmega328P with AVR GCC 7.3.0, AVR core 1.8.8, and the Adafruit library versions above. Physical bench testing remains to be done.
 
-Each lesson includes an expected result and at least one exercise. The [smart home acceptance checks](class-2/07-smart-home/README.md#acceptance-checks) cover the integrated system. Compilation verifies the sketch and library combination. The bench checks require physical hardware.
+Each lesson includes an expected result and at least one exercise. Use the [DHT11/L298N capstone checks](student-course/05-smart-home.md#before-you-move-on) or the [DHT22/TB6612FNG capstone checks](class-2/07-smart-home/README.md#acceptance-checks) for the hardware route you built.

@@ -1,6 +1,12 @@
 # Mostafa's Robotics School
 
-A beginner path into robotics and embedded systems. Start with a single LED, build a controller that can sense and act, then use those skills to choose a project track. Start with Class 1 even if this is your first circuit.
+A beginner path into robotics and embedded systems. Start with a single LED, build a controller that can sense and act, then use those skills to choose a project track.
+
+**Start here → [Full student course](student-course/README.md).** Follow the Class 1 and 2 projects in order, from getting the Uno ready to the smart-home capstone. This route uses the DHT11 and L298N from the course handbook.
+
+## If you have the DHT22 and TB6612FNG kit
+
+Use the lessons below as a continuous route with their own wiring and sketches. Both kits use the 5 V Arduino Uno R3 and lead to the same Class 3 roadmap.
 
 | Step | What you will build | Milestone |
 | --- | --- | --- |
@@ -8,7 +14,7 @@ A beginner path into robotics and embedded systems. Start with a single LED, bui
 | [Class 2 · Sensors and smart systems](class-2/README.md) | PWM dimmer, night light, climate alarm, proximity buzzer, motor control, and smart home | Integrate sensing and actuation, and verify each subsystem |
 | [Class 3 · Advanced foundations (planned)](class-3/README.md) | Timing, communication buses, motor selection, and control | Choose a robotics or embedded systems track |
 
-**Start here** → [Arduino, IDE and Blink](class-1/01-arduino-and-blink/README.md)
+**Start the DHT22 and TB6612FNG route** → [Arduino, IDE and Blink](class-1/01-arduino-and-blink/README.md)
 
 ## Hardware and setup
 
