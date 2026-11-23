@@ -1,6 +1,6 @@
 # Class 3 · Advanced robotics foundations
 
-[School roadmap](../README.md) · [Class 2](../class-2/README.md)
+[School roadmap](../README.md) · [Full course capstone](../student-course/05-smart-home.md) · [DHT22 and TB6612FNG Class 2](../class-2/README.md)
 
 **Planned curriculum.** Start after you can explain how the smart home reads a sensor, times two tasks, and powers the motor safely.
 
@@ -21,4 +21,4 @@
 | Self-balancing robot | Begin with bench IMU readings and wheel speed, then study angle estimation and constrained feedback tests before free balancing |
 | Embedded systems | Start with a serial sensor logger, add a bus peripheral and error handling, then explore interrupts, watchdogs and low-power operation |
 
-Use the same build record from Class 2 in each track so others can reproduce the project.
+Use the same build record from Class 2 in each track so others can reproduce the project. See the [expanded project paths](../student-course/06-project-paths.md) for starter project examples and additional topics.
