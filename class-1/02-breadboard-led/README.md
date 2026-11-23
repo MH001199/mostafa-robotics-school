@@ -2,7 +2,23 @@
 
 [School roadmap](../../README.md) · [Class 1](../README.md)
 
-[Open the sketch](breadboard_led/breadboard_led.ino)
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for Breadboard LED](../../lesson-visuals/alternate-breadboard_led.svg)
+
+Connection map for Breadboard LED on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-breadboard_led.svg) · [Arduino sketch](breadboard_led/breadboard_led.ino) · [Detailed notes and engineering questions](breadboard_led/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 

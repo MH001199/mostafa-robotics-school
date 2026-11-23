@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 1](../README.md)
 
-[Open the sketch](piezo_beep/piezo_beep.ino)
+### See the components and circuit
+
+[Passive piezo transducer product photos](https://www.adafruit.com/product/160) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Passive piezo buzzer](../../lesson-visuals/alternate-piezo_beep.svg)
+
+Connection map for Passive piezo buzzer on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-piezo_beep.svg) · [Arduino sketch](piezo_beep/piezo_beep.ino) · [Detailed notes and engineering questions](piezo_beep/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 

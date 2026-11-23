@@ -21,6 +21,16 @@ Use trigger/echo timing to calculate object distance mathematically.
 
 Arduino Uno; HC-SR04 5 V ultrasonic ranging module; jumper wires.
 
+### See the components and circuit
+
+[Ultrasonic module photos](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Measure ultrasonic distance](../lesson-visuals/ultrasonic_reading.svg)
+
+Connection map for Measure ultrasonic distance on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/ultrasonic_reading.svg) · [Arduino sketch](sketches/ultrasonic_reading/ultrasonic_reading.ino) · [Detailed notes and engineering questions](sketches/ultrasonic_reading/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 Use a 5 V HC-SR04 and enforce its nominal 2–400 cm range. Its ECHO output is 5 V logic, so a 3.3 V input needs suitable level conversion. Wait more than 60 ms between triggers. A broad, flat target gives a better echo. [HC-SR04 datasheet](https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf)
@@ -80,6 +90,16 @@ Make an audible warning pattern speed up as an object approaches.
 
 Arduino Uno; HC-SR04; low-current passive piezo buzzer; jumper wires.
 
+### See the components and circuit
+
+[Ultrasonic module photos](https://learn.adafruit.com/ultrasonic-sonar-distance-sensors) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Parking-style proximity alarm](../lesson-visuals/parking_alarm.svg)
+
+Connection map for Parking-style proximity alarm on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/parking_alarm.svg) · [Arduino sketch](sketches/parking_alarm/parking_alarm.ino) · [Detailed notes and engineering questions](sketches/parking_alarm/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 Keep the range wiring from Project 13. Wire D3 through 330 Ω to the passive piezo positive lead, then connect its other lead to GND. The Uno R3 tone timer affects PWM on D3 and D11, so keep PWM loads off those two pins while using tone.
@@ -138,6 +158,16 @@ Learn the H-bridge, shared ground, separate motor supply, direction pins and PWM
 ### Components and module names
 
 Arduino Uno; 1 small brushed DC motor; one L298N red dual H-bridge board; regulated motor power source appropriate for motor; wires.
+
+### See the components and circuit
+
+[L298N breakout and label examples](https://components101.com/modules/l293n-motor-driver-module) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for L298N motor direction and speed](../lesson-visuals/l298n_motor_control.svg)
+
+Connection map for L298N motor direction and speed on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/l298n_motor_control.svg) · [Arduino sketch](sketches/l298n_motor_control/l298n_motor_control.ino) · [Detailed notes and engineering questions](sketches/l298n_motor_control/NOTES.md)
 
 ### Exact wiring (power OFF first)
 
@@ -203,6 +233,18 @@ Use DHT11 readings to control a ventilating motor with hysteresis.
 ### Components and module names
 
 Arduino Uno, DHT11, L298N, a brushed DC motor, and a separately rated motor supply. Secure the motor to the bench and leave its shaft bare.
+
+### See the components and circuit
+
+[Uno and a DHT11 sensor in a separate demonstration](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg)
+
+*Uno and a DHT11 sensor in a separate demonstration · Edwiyanto · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
+![Wiring diagram for Temperature-controlled motor](../lesson-visuals/temperature_fan.svg)
+
+Connection map for Temperature-controlled motor on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/temperature_fan.svg) · [Arduino sketch](sketches/temperature_fan/temperature_fan.ino) · [Detailed notes and engineering questions](sketches/temperature_fan/NOTES.md)
 
 ### Exact wiring (power OFF first)
 

@@ -18,6 +18,24 @@ Combine three complete subsystems in one coordinated Arduino program: lamp, fan 
 
 Arduino Uno; breadboard; bare LDR + 10 kΩ divider; LED + 220 Ω resistor; DHT11; HC-SR04; passive piezo buzzer; L298N; brushed DC motor; suitable external motor supply; jumpers.
 
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for Smart home bench capstone](../lesson-visuals/smart_home.svg)
+
+Connection map for Smart home bench capstone on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/smart_home.svg) · [Arduino sketch](sketches/smart_home/smart_home.ino) · [Detailed notes and engineering questions](sketches/smart_home/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 For a bare four-pin DHT11 with the grille toward you and pins down, wire left to right as 5V, DATA (D2), unused, GND. Add 10 kΩ between DATA and 5V. For a breakout, use the printed pin labels and verify whether a pull-up is already fitted. Install **DHT sensor library** by Adafruit and **Adafruit Unified Sensor** from Library Manager. Keep the two-second sampling interval used here. [DHT wiring](https://learn.adafruit.com/dht/connecting-to-a-dhtxx-sensor) · [Arduino library setup](https://learn.adafruit.com/dht/using-a-dhtxx-sensor-with-arduino)

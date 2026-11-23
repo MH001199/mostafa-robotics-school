@@ -2,7 +2,9 @@
 
 A beginner path into robotics and embedded systems. Start with a single LED, build a controller that can sense and act, then use those skills to choose a project track.
 
-**Start here → [Full student course](student-course/README.md).** Follow the Class 1 and 2 projects in order, from getting the Uno ready to the smart-home capstone. This route uses the DHT11 and L298N from the course handbook.
+**[Start Learning](student-course/README.md).** Follow the Class 1 and 2 projects in order, from getting the Uno ready to the smart-home capstone. This route uses the DHT11 and L298N from the course handbook.
+
+New to breadboards? Read [Section 00 · Breadboard introduction](Class-01-Arduino-Fundamentals/00-Introduction/README.md) before wiring your first LED. [Image sources](IMAGE-SOURCES.md)
 
 ## If you have the DHT22 and TB6612FNG kit
 

@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
-[Open the sketch](dht_alarm/dht_alarm.ino)
+### See the components and circuit
+
+[DHT22 and DHT11 package examples](https://learn.adafruit.com/dht/overview) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for DHT22 climate alarm](../../lesson-visuals/alternate-dht_alarm.svg)
+
+Connection map for DHT22 climate alarm on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-dht_alarm.svg) · [Arduino sketch](dht_alarm/dht_alarm.ino) · [Detailed notes and engineering questions](dht_alarm/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 

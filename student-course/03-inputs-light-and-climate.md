@@ -65,6 +65,24 @@ Understand digital versus analog behavior and vary an LED duty cycle with PWM.
 
 Arduino Uno; LED; 220 Ω resistor; breadboard; jumpers.
 
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for PWM LED fade](../lesson-visuals/pwm_fade.svg)
+
+Connection map for PWM LED fade on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/pwm_fade.svg) · [Arduino sketch](sketches/pwm_fade/pwm_fade.ino) · [Detailed notes and engineering questions](sketches/pwm_fade/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 D6 (PWM) → 220 Ω resistor → LED anode; LED cathode → GND.
@@ -120,6 +138,16 @@ Measure light-dependent voltage with a 10 kΩ resistor divider and record readin
 ### Components and module names
 
 Arduino Uno; bare LDR/photoresistor; 10 kΩ fixed resistor; breadboard and jumpers.
+
+### See the components and circuit
+
+[Photoresistor product photos](https://www.adafruit.com/product/161) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Read ambient light](../lesson-visuals/ldr_reading.svg)
+
+Connection map for Read ambient light on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/ldr_reading.svg) · [Arduino sketch](sketches/ldr_reading/ldr_reading.ino) · [Detailed notes and engineering questions](sketches/ldr_reading/NOTES.md)
 
 ### Exact wiring (power OFF first)
 
@@ -178,6 +206,24 @@ Use if/else to turn on an LED automatically when surroundings are dark.
 
 Arduino Uno; bare LDR; 10 kΩ resistor; LED; 220 Ω resistor; breadboard; jumpers.
 
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for Automatic night light](../lesson-visuals/automatic_night_light.svg)
+
+Connection map for Automatic night light on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/automatic_night_light.svg) · [Arduino sketch](sketches/automatic_night_light/automatic_night_light.ino) · [Detailed notes and engineering questions](sketches/automatic_night_light/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 LDR divider: 5V → LDR → A0 → 10 kΩ → GND. LED: D6 → 220 Ω → LED anode; cathode → GND.
@@ -234,6 +280,18 @@ Learn sensor libraries and read digital temperature/humidity data.
 ### Components and module names
 
 Arduino Uno; DHT11 3-pin module or 4-pin bare DHT11; 10 kΩ pull-up for bare sensor; breadboard; jumpers.
+
+### See the components and circuit
+
+[Uno and a DHT11 sensor in a separate demonstration](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg)
+
+*Uno and a DHT11 sensor in a separate demonstration · Edwiyanto · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
+![Wiring diagram for Read temperature and humidity](../lesson-visuals/dht11_reading.svg)
+
+Connection map for Read temperature and humidity on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/dht11_reading.svg) · [Arduino sketch](sketches/dht11_reading/dht11_reading.ino) · [Detailed notes and engineering questions](sketches/dht11_reading/NOTES.md)
 
 ### Exact wiring (power OFF first)
 
@@ -299,6 +357,18 @@ Use OR logic and a passive buzzer to respond to environmental thresholds.
 
 Arduino Uno; DHT11; passive low-current piezo buzzer; breadboard and jumper wires.
 
+### See the components and circuit
+
+[Uno and a DHT11 sensor in a separate demonstration](https://commons.wikimedia.org/wiki/File:Arduino_uno_dht11.jpg)
+
+*Uno and a DHT11 sensor in a separate demonstration · Edwiyanto · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+
+![Wiring diagram for Temperature and humidity alarm](../lesson-visuals/dht11_alarm.svg)
+
+Connection map for Temperature and humidity alarm on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/dht11_alarm.svg) · [Arduino sketch](sketches/dht11_alarm/dht11_alarm.ino) · [Detailed notes and engineering questions](sketches/dht11_alarm/NOTES.md)
+
 ### Exact wiring (power OFF first)
 
 For a bare four-pin DHT11 with the grille toward you and pins down, wire left to right as 5V, DATA (D2), unused, GND. Add 10 kΩ between DATA and 5V. For a breakout, use the printed pin labels and verify whether a pull-up is already fitted. Install **DHT sensor library** by Adafruit and **Adafruit Unified Sensor** from Library Manager. Keep the two-second sampling interval used here. [DHT wiring](https://learn.adafruit.com/dht/connecting-to-a-dhtxx-sensor) · [Arduino library setup](https://learn.adafruit.com/dht/using-a-dhtxx-sensor-with-arduino)
@@ -358,6 +428,24 @@ Run an automatic lamp and an independent environmental warning using one sketch.
 ### Components and module names
 
 Arduino Uno; LDR; 10 kΩ resistor; DHT11; LED; 220 Ω resistor; passive piezo buzzer; breadboard and jumpers.
+
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for Combine light and climate](../lesson-visuals/light_and_climate.svg)
+
+Connection map for Combine light and climate on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../lesson-visuals/light_and_climate.svg) · [Arduino sketch](sketches/light_and_climate/light_and_climate.ino) · [Detailed notes and engineering questions](sketches/light_and_climate/NOTES.md)
 
 ### Exact wiring (power OFF first)
 

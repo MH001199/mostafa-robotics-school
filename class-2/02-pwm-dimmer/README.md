@@ -2,7 +2,23 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
-[Open the sketch](pwm_dimmer/pwm_dimmer.ino)
+### See the components and circuit
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Component-Red-LED.jpg"><img src="../../lesson-visuals/Electronic-Component-Red-LED.jpg" width="260" alt="Two-lead through-hole red LED"></a>
+
+*Two-lead through-hole red LED · Evan-Amos · Public domain.*
+
+<a href="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg"><img src="../../lesson-visuals/Electronic-Axial-Lead-Resistors-Array.jpg" width="260" alt="Axial resistors with colored bands"></a>
+
+*Axial resistors with colored bands · Evan-Amos · Public domain.*
+
+Use the resistance specified in the wiring table. Verify unfamiliar color bands with a multimeter before wiring.
+
+![Wiring diagram for PWM LED dimmer](../../lesson-visuals/alternate-pwm_dimmer.svg)
+
+Connection map for PWM LED dimmer on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-pwm_dimmer.svg) · [Arduino sketch](pwm_dimmer/pwm_dimmer.ino) · [Detailed notes and engineering questions](pwm_dimmer/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 

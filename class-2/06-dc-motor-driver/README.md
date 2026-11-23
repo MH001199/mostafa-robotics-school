@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
-[Open the sketch](dc_motor_driver/dc_motor_driver.ino)
+### See the components and circuit
+
+[Three-terminal potentiometer photos](https://www.adafruit.com/product/562) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for TB6612FNG motor control](../../lesson-visuals/alternate-dc_motor_driver.svg)
+
+Connection map for TB6612FNG motor control on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-dc_motor_driver.svg) · [Arduino sketch](dc_motor_driver/dc_motor_driver.ino) · [Detailed notes and engineering questions](dc_motor_driver/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 

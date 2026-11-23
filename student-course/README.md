@@ -13,6 +13,8 @@ The full course on this page uses a **5 V Arduino Uno R3, DHT11 and L298N**. Use
 | Stage | Start here | Checkpoint before you continue |
 | --- | --- | --- |
 | Class 1 · Set up the board | [Get your Arduino ready](01-board-and-ide.md) | Find the correct board and port and explain what runs in setup and loop |
+| Class 1 · First upload | [Built-in Blink](02-leds-and-sound.md#builtin_blink) | Verify, upload and watch the onboard L LED |
+| Section 00 · Breadboard basics | [What is a breadboard?](../Class-01-Arduino-Fundamentals/00-Introduction/README.md) | Identify two connected holes and wire your first LED and resistor |
 | Class 1 · Build outputs | [Build with LEDs and buzzers](02-leds-and-sound.md) | Build a traffic light, change a timing pattern and play an original piezo melody |
 | Class 2 · Read sensors | [Read inputs and make decisions](03-inputs-light-and-climate.md) | Measure light and room conditions, choose thresholds and combine two sensors |
 | Class 2 · Distance and motion | [Measure distance and drive a motor](04-distance-and-motors.md) | Test ranging and motor power separately before adding automation |

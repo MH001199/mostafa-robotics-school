@@ -2,7 +2,15 @@
 
 [School roadmap](../../README.md) · [Class 1](../README.md)
 
-[Open the sketch](ai_melody/ai_melody.ino)
+### See the components and circuit
+
+[Passive piezo transducer product photos](https://www.adafruit.com/product/160) · Use the source to identify the part and then follow the wiring map below.
+
+![Wiring diagram for Compose a melody with AI](../../lesson-visuals/alternate-ai_melody.svg)
+
+Connection map for Compose a melody with AI on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
+
+[Wiring diagram](../../lesson-visuals/alternate-ai_melody.svg) · [Arduino sketch](ai_melody/ai_melody.ino) · [Detailed notes and engineering questions](ai_melody/NOTES.md)
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 
