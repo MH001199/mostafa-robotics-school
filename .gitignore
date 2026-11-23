@@ -1,0 +1,5 @@
+/site/
+/.school-site-*/
+/.site-docs/
+/simulation-build/
+__pycache__/
