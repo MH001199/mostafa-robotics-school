@@ -1,0 +1,18 @@
+name: Suggest a lesson improvement
+description: Suggest a clearer explanation, visual or exercise
+title: "[lesson-improvement] "
+body:
+  - type: input
+    id: context
+    attributes:
+      label: Lesson URL and hardware kit
+      description: Include the model names or say that the request applies to the whole school.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Suggested change
+      description: What confused you and what replacement would help a beginner?
+    validations:
+      required: true
