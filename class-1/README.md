@@ -2,6 +2,8 @@
 
 [School roadmap](../README.md)
 
+This is the first part of [Optional Hardware Variations](../resources/hardware-variations.md). Complete [Section 00](../Class-01-Arduino-Fundamentals/00-Introduction/README.md) before starting. The [core Class 1 course](../student-course/02-leds-and-sound.md) uses the core kit.
+
 Start with a bare Uno. By the end, you will be able to upload a sketch, wire a current-limited LED, sequence several outputs, and play an original piezo melody.
 
 ## Lessons
