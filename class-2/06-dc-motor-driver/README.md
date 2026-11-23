@@ -2,6 +2,21 @@
 
 [School roadmap](../../README.md) · [Class 2](../README.md)
 
+> **Optional hardware variation.** Follow this page with its own sketch and pin map. [Section 00](../../Class-01-Arduino-Fundamentals/00-Introduction/README.md) applies to both kits.
+
+### Learning Objectives
+
+Prerequisite: complete Section 00 and the previous linked lesson. In this lesson, explain and demonstrate robot drive and actuator feedback.
+
+### Predict
+
+Sketch the signal and power paths in different colors. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
+
 ### See the components and circuit
 
 [Three-terminal potentiometer photos](https://www.adafruit.com/product/562) · Use the source to identify the part and then follow the wiring map below.
@@ -11,6 +26,10 @@
 Connection map for TB6612FNG motor control on the Uno R3. Follow connector labels. A repeated junction label is one shared electrical node.
 
 [Wiring diagram](../../lesson-visuals/alternate-dc_motor_driver.svg) · [Arduino sketch](dc_motor_driver/dc_motor_driver.ino) · [Detailed notes and engineering questions](dc_motor_driver/NOTES.md)
+
+### Run
+
+Using the matching sketch above, select **Arduino Uno**, Verify, then Upload. Check for this behavior: Bare secured shaft coasts at low settings and rotates at higher settings
 
 Disconnect USB and any external supply before changing wires. Reconnect power after checking the circuit.
 
@@ -47,6 +66,37 @@ Leave the motor shaft bare and secure the motor to the bench. With VM still off,
 **If it fails.** Check separate VCC/VM supplies, the shared ground, and the STBY connection. If the Uno resets when the motor starts, turn off VM and check supply sizing, return wiring and the driver's local decoupling against its datasheet. If the motor hums without turning, drop the command to zero, check that the shaft is free, and try a higher command briefly.
 
 [Toshiba TB6612FNG datasheet](https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG)
+
+
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](dc_motor_driver/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Find the lowest starting duty with an unloaded secured motor.
+
+### Make
+
+Log startup and running duty and explain why they differ. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](dc_motor_driver/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. What does the wiper feed?
+2. What range does the ADC report?
+3. How would you isolate a loose ground?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Demonstrate the expected behavior above. Capture one timed, measured, or serial observation, and explain which line or connection caused it.
+
+### Continue Learning
 
 Previous · [Ultrasonic distance and proximity buzzer](../../class-2/05-ultrasonic-proximity/README.md)
 

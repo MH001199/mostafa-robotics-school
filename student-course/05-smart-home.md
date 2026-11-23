@@ -10,9 +10,20 @@ Use the three working subsystems from the earlier projects. The lamp should resp
 
 ## Project 17 · Integrated Smart Home
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Combine three complete subsystems in one coordinated Arduino program: lamp, fan and proximity alarm.
+
+### Predict
+
+Draw the three inputs and three outputs before wiring. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -57,7 +68,7 @@ Where the wiring below says buzzer D3, put a 330 Ω resistor in series with a 5 
 
 Subsystem A: the LDR switches the lamp using two thresholds (400/550) so it does not flicker. Subsystem B: the DHT11 drives motor ON at 30°C and OFF at 28°C. Subsystem C: HC-SR04 produces OFF/slow/fast/continuous buzzer behavior depending on distance. millis() schedules LDR ~100ms, DHT11 ~2000ms, ultrasonic ~80ms, status logging ~2000ms. pulseIn() still waits up to 25ms; this is cooperative scheduling, not true parallelism.
 
-### Build and test — step by step
+### Run
 
 1. Run and verify each sensor module independently before integration.
 2. With power off, construct one clean breadboard layout with common GND.
@@ -83,7 +94,35 @@ setFan() drives L298N; updateLighting() uses hysteresis; updateEnvironment() che
 
 LDR dark→lamp ON; hot temperature→fan ON; close object→beeps accelerate. All status values appear in Serial Monitor.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/smart_home/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Run all three capstone acceptance checks and record the time of each change.
+
+### Make
+
+Change the alarm cadence without changing the sensor sampling cadence and explain the separation. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/smart_home/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Why divide the travel distance by two?
+2. Why should a timeout be handled separately?
+3. What happens to the echo from an angled target?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Demonstrate the lamp, fan, alarm, and climate fault cases in the acceptance table below.
+
+### Additional Challenge
 
 Final assignment: choose two enhancements: 3-level PWM dimming, extra status LEDs, manual lighting override, temperature-based motor speed, different buzzer warnings, LCD/OLED display, extra ultrasonic sensor, reusable functions, more useful logging, or custom automation scenario. Submit photo, wiring explanation, sketch and one measurement table.
 
@@ -98,6 +137,8 @@ This is an educational low-voltage prototype only. No mains wiring, no unattende
 ### Real build / practical application photo
 
 [Physical smart-home/sensor integration project reference](https://projecthub.arduino.cc/js-arduino/4fc420da-214a-4597-a8cd-363ce6cbbbf2) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
+
+### Continue Learning
 
 **Previous** · [Project 16 · Temperature-Controlled Fan](04-distance-and-motors.md#temperature_fan)
 

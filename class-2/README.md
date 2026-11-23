@@ -2,6 +2,8 @@
 
 [School roadmap](../README.md)
 
+This is the DHT22/TB6612FNG part of [Optional Hardware Variations](../resources/hardware-variations.md). Use this kit’s matching wiring and sketches. The main DHT11/L298N class starts at [Read inputs and make decisions](../student-course/03-inputs-light-and-climate.md).
+
 Use the circuits from Class 1 to build systems that read inputs and make decisions. By the end, you will be able to calibrate a sensor, explain PWM, power a motor through a driver, and integrate the subsystems into one bench project.
 
 ## Lessons

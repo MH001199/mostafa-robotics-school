@@ -1,0 +1,18 @@
+name: Request a future robotics project
+description: Propose a new build for the curriculum
+title: "[future-project] "
+body:
+  - type: input
+    id: context
+    attributes:
+      label: Lesson URL and hardware kit
+      description: Include the model names or say that the request applies to the whole school.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Project proposal
+      description: Describe the goal, needed skills, supported hardware, and an observable success check.
+    validations:
+      required: true

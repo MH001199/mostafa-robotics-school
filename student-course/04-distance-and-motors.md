@@ -13,9 +13,20 @@ The light and climate projects made decisions from slow-changing inputs. Next, t
 
 ## Project 13 · HC-SR04 Distance Measurements
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Use trigger/echo timing to calculate object distance mathematically.
+
+### Predict
+
+Predict the distance corresponding to 2000 µs. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -41,7 +52,7 @@ HC-SR04 VCC→5V, TRIG→D7, ECHO→D8, GND→GND. Uno is 5 V logic, so a typica
 
 The transmitter emits ~40 kHz ultrasonic pulses and times the echo. Sound speed near 20°C ≈343 m/s≈0.0343 cm/μs. Because sound travels to the object and back, distance_cm = duration_us × 0.0343 / 2. Timeout/zero pulse means invalid reading, not zero distance. Bats also use echo timing for orientation (simplified analogy).
 
-### Build and test — step by step
+### Run
 
 1. Wire the 4 sensor pins.
 2. Point sensor toward a flat object approximately 20 cm away.
@@ -62,7 +73,35 @@ delayMicroseconds(10) sends a trigger pulse. pulseIn() measures ECHO high time o
 
 Distances displayed in centimeters when a suitable obstacle is in range.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/ultrasonic_reading/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Record readings from a flat target at 10, 20, and 40 cm.
+
+### Make
+
+Compare straight and angled targets and characterize missing readings. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/ultrasonic_reading/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Why divide the travel distance by two?
+2. Why should a timeout be handled separately?
+3. What happens to the echo from an angled target?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Compare three ruler distances with the serial report and record an invalid echo separately.
+
+### Additional Challenge
 
 Measure 4 actual distances and compute absolute error, then explain three sources of measurement error.
 
@@ -74,6 +113,8 @@ Robot collision avoidance; tank-level probes; parking assistance and proximity m
 
 [Arduino UNO + HC-SR04 + HC 05 + breadboard - bird's eye 00](https://commons.wikimedia.org/wiki/File:Arduino_UNO_%2B_HC-SR04_%2B_HC_05_%2B_breadboard_-_bird%27s_eye_00.jpg) — Pradana Aumars. License: CC BY-SA 4.0. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 12 · Combined Light and Climate System](03-inputs-light-and-climate.md#light_and_climate)
 
 **Next** · [Project 14 · Ultrasonic Parking-Style Alarm](04-distance-and-motors.md#parking_alarm). Convert measured distance into a distinct warning pattern.
@@ -82,9 +123,20 @@ Robot collision avoidance; tank-level probes; parking assistance and proximity m
 
 ## Project 14 · Ultrasonic Parking-Style Alarm
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Make an audible warning pattern speed up as an object approaches.
+
+### Predict
+
+Predict the branch for 10, 25 and 60 cm. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -110,7 +162,7 @@ Connect HC-SR04 VCC to 5V, TRIG to D7, ECHO to D8 and GND to GND. The piezo uses
 
 Use distance zones: >60 cm = silent; 25–60 cm = slow beeps; 10–25 cm = faster beeps; ≤10 cm = continuous tone. A timeout is not a valid obstacle distance.
 
-### Build and test — step by step
+### Run
 
 1. Assemble and test distance sensor separately first.
 2. Add buzzer and verify polarity/current requirements.
@@ -131,7 +183,35 @@ if/else if gives exactly one warning range. This beginner version uses delays, s
 
 Silence far away, slow then faster beeps as the obstacle approaches, continuous sound at 10 cm or nearer.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/parking_alarm/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Change the middle-zone beep rhythm and measure it.
+
+### Make
+
+Use a timestamp for beeping instead of holding up distance sampling. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/parking_alarm/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Why divide the travel distance by two?
+2. Why should a timeout be handled separately?
+3. What happens to the echo from an angled target?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Demonstrate quiet, slow, fast and continuous zones with a ruler and a flat target.
+
+### Additional Challenge
 
 Add a green/yellow/red LED indicator. Find why the buzzer stops safely on an invalid echo.
 
@@ -143,6 +223,8 @@ Parking aids; collision warnings; occupancy/proximity signals.
 
 [Breadboard parking distance alarm prototype](https://medium.com/nabilarahmi/parking-sensor-microprocessor-project-6f429f5118dc) — See original project page. License: Not independently verified for republication; link only. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 13 · HC-SR04 Distance Measurements](04-distance-and-motors.md#ultrasonic_reading)
 
 **Next** · [Project 15 · DC Motor Direction and Speed](04-distance-and-motors.md#l298n_motor_control). Next, control an actuator that needs more current than a GPIO can supply.
@@ -151,9 +233,20 @@ Parking aids; collision warnings; occupancy/proximity signals.
 
 ## Project 15 · DC Motor Direction and Speed
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Learn the H-bridge, shared ground, separate motor supply, direction pins and PWM speed.
+
+### Predict
+
+Trace ENA and both input states on paper for all four phases. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -179,7 +272,7 @@ L298N: ENA→D5 (remove ENA enable jumper), IN1→D9, IN2→D10, OUT1/OUT2→DC 
 
 DC motors draw more current than GPIO can supply. An H-bridge reverses voltage polarity. L298N is accessible for demonstrations but has a large internal voltage drop and needs thermal consideration; a 6 V motor on a 6 V supply may spin weakly under load. For small, efficient designs, TB6612FNG or DRV8833 can be superior. Low-speed PWM may not overcome static friction.
 
-### Build and test — step by step
+### Run
 
 1. Disconnect battery and USB. Secure an unloaded motor without fan blade for reversing tests.
 2. Check motor rated voltage/stall current vs driver/supply.
@@ -202,7 +295,35 @@ D5 sets ENA PWM (~71% duty at value 180); IN1/IN2 decide polarity; motorStop() d
 
 3 s forward, 2 s stop, 3 s reverse, 2 s stop.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/l298n_motor_control/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Try a second approved duty value with the bare secured motor and compare startup behavior.
+
+### Make
+
+Design a state machine that waits before reversing direction. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/l298n_motor_control/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Which supply powers the motor?
+2. What does ENA change?
+3. Why stop before reversing?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Show the four direction and stop phases with the motor secured. Identify the logic and motor supplies.
+
+### Additional Challenge
 
 Compare PWM values 100, 180, 255. Note whether motor stalls at low settings. Explain why a small rectangular PP3 9V battery is usually a bad motor supply.
 
@@ -218,6 +339,8 @@ Motor power is externally supplied. Do not connect a brushed motor directly to A
 
 [3V DC Motor Connected to an Arduino Uno and Motor Shield](https://commons.wikimedia.org/wiki/File:3V_DC_Motor_Connected_to_an_Arduino_Uno_and_Motor_Shield.jpg) — Dcaldero8983. License: Creative Commons; confirm exact terms on source before reuse. The linked example may use different hardware. Follow the wiring in this lesson.
 
+### Continue Learning
+
 **Previous** · [Project 14 · Ultrasonic Parking-Style Alarm](04-distance-and-motors.md#parking_alarm)
 
 **Next** · [Project 16 · Temperature-Controlled Fan](04-distance-and-motors.md#temperature_fan). Use a temperature reading to decide when the motor can start and stop.
@@ -226,9 +349,20 @@ Motor power is externally supplied. Do not connect a brushed motor directly to A
 
 ## Project 16 · Temperature-Controlled Fan
 
-### Goal
+### Learning Objectives
+
+Prerequisite: complete the previous project linked below.
 
 Use DHT11 readings to control a ventilating motor with hysteresis.
+
+### Predict
+
+Predict the state at 29 °C given each possible prior state. Before uploading, record the expected outcome and the reason or line of code for your prediction.
+
+| Condition or input | Prediction | Evidence in code | Observation after Run |
+| --- | --- | --- | --- |
+| First test | | | |
+| Second test | | | |
 
 ### Components and module names
 
@@ -260,7 +394,7 @@ DHT11 DATA→D2, VCC→5V, GND→GND. L298N ENA→D5 (ENA jumper removed), IN1�
 
 With hysteresis the fan switches ON at ≥30°C, then stays ON until ≤28°C. Two thresholds prevent constant switching around 30°C. A fan circulates or ventilates air; it does not necessarily cool a sealed room. Demo readings are not suitable for fire protection.
 
-### Build and test — step by step
+### Run
 
 1. Test the DHT11 and motor projects independently.
 2. Mount motor safely; avoid open propellers near fingers/wires.
@@ -281,7 +415,35 @@ The fanIsOn state remembers the output across loop cycles. The sensor is sampled
 
 Motor ON at or above 30°C, OFF at or below 28°C, status printed each two seconds.
 
-### Hands-on challenge
+### Investigate
+
+Trace one input or timing value from the source to an output. Use the [matching code walkthrough](sketches/temperature_fan/NOTES.md) to check your explanation and the pin map. Write one thing your observation confirms and one thing you still need to measure.
+
+### Modify
+
+Adjust both thresholds near ambient and confirm the on and off behavior.
+
+### Make
+
+Log the event that causes a state change instead of printing only sampled levels. Define what success will look like and keep the circuit within its original ratings.
+
+### Troubleshoot
+
+Use the symptom-specific checks in the [sketch notes](sketches/temperature_fan/NOTES.md#common-errors-and-troubleshooting). If the kit differs, check the parts and sketch together before moving any wires. Change one variable at a time.
+
+### Knowledge Check
+
+1. Which supply powers the motor?
+2. What does ENA change?
+3. Why stop before reversing?
+
+You should be able to explain the signal or timing, identify the line that controls it, and justify a troubleshooting measurement.
+
+### Practical Checkpoint
+
+Show both state changes by adjusting limits safely near ambient. Record the sensor values and prior motor state.
+
+### Additional Challenge
 
 Build 3 speed steps based on temperature, or add an override switch (requires new input pin and safe wiring).
 
@@ -292,6 +454,8 @@ Greenhouse ventilation; electronics cooling demonstrations; automated air circul
 ### Real build / practical application photo
 
 [Arduino and small propeller motor](https://commons.wikimedia.org/wiki/File:Arduino_and_small_propeller_motor.jpg) — messi / 1messi01. License: CC BY-SA 3.0. The linked example may use different hardware. Follow the wiring in this lesson.
+
+### Continue Learning
 
 **Previous** · [Project 15 · DC Motor Direction and Speed](04-distance-and-motors.md#l298n_motor_control)
 

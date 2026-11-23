@@ -14,11 +14,12 @@
 
 ## Choose a track
 
-| Track | Project progression |
-| --- | --- |
-| Mobile robotics | Start with an RC rover, add wheel encoders, then practice regulating speed |
-| Robot arms | Control one servo, add joints and limits, then plan simple motion within the workspace |
-| Self-balancing robot | Begin with bench IMU readings and wheel speed, then study angle estimation and constrained feedback tests before free balancing |
-| Embedded systems | Start with a serial sensor logger, add a bus peripheral and error handling, then explore interrupts, watchdogs and low-power operation |
+| Planned track | Prerequisites to demonstrate | First project direction |
+| --- | --- | --- |
+| Bluetooth RC Cars and Mobile Robotics | H-bridge power, PWM, safe stop, and UART communication | Begin with a rover on a stand, then add command timeouts and encoders |
+| Robotic Arms | Servo control, current budgeting, joint limits, and coordinate frames | Control one joint, then measure reachable positions before adding joints |
+| Self-Balancing Robots | IMU calibration, fixed-rate sampling, basic feedback, and motor safety | Record angle and wheel-speed data on a restrained bench setup before any free balancing |
+| Autonomous Robotics | Sensor validity, state machines, motor stop behavior, and basic position estimates | Build a rover that stops on invalid readings, then add a simple navigation state machine |
+| Embedded Systems and IoT | UART and I²C, timed sampling, fault handling, and basic network and data privacy concepts | Start with a local sensor logger, then add a read-only dashboard |
 
 Use the same build record from Class 2 in each track so others can reproduce the project. See the [expanded project paths](../student-course/06-project-paths.md) for starter project examples and additional topics.

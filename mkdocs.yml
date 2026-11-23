@@ -1,0 +1,56 @@
+site_name: Mostafa's Robotics School
+site_description: Beginner robotics and embedded systems on Arduino Uno R3
+site_url: https://mh001199.github.io/mostafa-robotics-school/
+repo_url: https://github.com/MH001199/mostafa-robotics-school
+repo_name: MH001199/mostafa-robotics-school
+docs_dir: !ENV [SCHOOL_DOCS_DIR, .site-docs]
+site_dir: site
+theme:
+  name: material
+  language: en
+  palette:
+    primary: teal
+    accent: amber
+  features:
+    - navigation.footer
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search
+markdown_extensions:
+  - tables
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+validation:
+  nav:
+    omitted_files: info
+  links:
+    not_found: warn
+    anchors: warn
+nav:
+  - Home: index.md
+  - Start Learning: student-course/README.md
+  - Section 00:
+      - Introduction: Class-01-Arduino-Fundamentals/00-Introduction/README.md
+      - Breadboards: Class-01-Arduino-Fundamentals/00-Introduction/breadboards.md
+      - First connection notes: Class-01-Arduino-Fundamentals/00-Introduction/serial_connection/NOTES.md
+  - Class 1: student-course/02-leds-and-sound.md
+  - Class 2:
+      - Inputs, light and climate: student-course/03-inputs-light-and-climate.md
+      - Distance and motors: student-course/04-distance-and-motors.md
+      - Smart Home: student-course/05-smart-home.md
+  - Class 3 Roadmap: class-3/README.md
+  - Components Encyclopedia: resources/components.md
+  - Troubleshooting Guide: resources/troubleshooting.md
+  - Glossary: resources/glossary.md
+  - Simulations: simulations/README.md
+  - Optional Hardware Variations: resources/hardware-variations.md
+  - Student Projects: resources/student-projects.md
+  - Community and Contributions: CONTRIBUTING.md

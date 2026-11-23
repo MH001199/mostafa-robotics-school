@@ -4,17 +4,14 @@
 
 This course starts with an empty breadboard and ends with a small system that senses light, temperature, humidity and distance. Each project states what to build, shows the wiring and sketch, tells you what to observe, and gives you a challenge. Follow **Next** at the end of each project.
 
-## Pick the course for your kit
-
-The full course on this page uses a **5 V Arduino Uno R3, DHT11 and L298N**. Use its sketches and pin maps together. If your kit has a **DHT22 and TB6612FNG**, follow the [12-lesson DHT22 and TB6612FNG route](../class-1/README.md) through Class 2. Both routes lead into the same [Class 3 foundations](../class-3/README.md).
+The core path uses one kit: **Arduino Uno R3, DHT11, L298N, LDR and HC-SR04**. Use the pin map and sketch from the same lesson.
 
 ## Follow the course in order
 
 | Stage | Start here | Checkpoint before you continue |
 | --- | --- | --- |
-| Class 1 · Set up the board | [Get your Arduino ready](01-board-and-ide.md) | Find the correct board and port and explain what runs in setup and loop |
-| Class 1 · First upload | [Built-in Blink](02-leds-and-sound.md#builtin_blink) | Verify, upload and watch the onboard L LED |
-| Section 00 · Breadboard basics | [What is a breadboard?](../Class-01-Arduino-Fundamentals/00-Introduction/README.md) | Identify two connected holes and wire your first LED and resistor |
+| Section 00 · Foundations | [Start Section 00](../Class-01-Arduino-Fundamentals/00-Introduction/README.md) | Identify the Uno pins and breadboard groups, then upload the serial connection test |
+| Class 1 · First project | [Built-in Blink](02-leds-and-sound.md#builtin_blink) | Predict, upload and time the onboard LED |
 | Class 1 · Build outputs | [Build with LEDs and buzzers](02-leds-and-sound.md) | Build a traffic light, change a timing pattern and play an original piezo melody |
 | Class 2 · Read sensors | [Read inputs and make decisions](03-inputs-light-and-climate.md) | Measure light and room conditions, choose thresholds and combine two sensors |
 | Class 2 · Distance and motion | [Measure distance and drive a motor](04-distance-and-motors.md) | Test ranging and motor power separately before adding automation |
@@ -39,4 +36,17 @@ The full course on this page uses a **5 V Arduino Uno R3, DHT11 and L298N**. Use
 
 Use a series resistor for every indicator LED and keep the Uno's signal pins within its 5 V logic range. With two supplies, share the ground reference and route motor power through its driver. Match the motor supply to the rated motor and the specific driver module. Keep the shaft bare and use these circuits only as low-voltage classroom prototypes.
 
-**Start here** · [Get your Arduino ready](01-board-and-ide.md).
+## Your completion checklist
+
+- [ ] Complete the Section 00 pin and breadboard checks and record two serial ticks.
+- [ ] Complete the Class 1 projects and explain the timing in one of your builds.
+- [ ] Complete the Class 2 projects and record all four Smart Home outcomes.
+- [ ] Publish a short build record and choose a planned Class 3 path.
+
+Try an [optional Wokwi template](../simulations/README.md) if you are still waiting for hardware. Read the [spoiler-marked solution hints](../resources/solutions.md) after you have tried the selected exercises.
+
+**Start here** · [Section 00](../Class-01-Arduino-Fundamentals/00-Introduction/README.md).
+
+## Optional Hardware Variations
+
+[Use the DHT22/TB6612FNG variation](../resources/hardware-variations.md) when your kit differs. Keep each variation’s wiring and code together.

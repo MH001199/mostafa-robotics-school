@@ -1,4 +1,6 @@
 # Image sources
+
+The [Sojourner rover photograph](https://commons.wikimedia.org/wiki/File:Sojourner_on_Mars_PIA01122.jpg) and [subsystem illustration](https://commons.wikimedia.org/wiki/File:Sojourner_rover_scheme.jpg) are credited to NASA and linked from Section 00. Commons identifies both as public domain in the United States. Section 00’s PWM and program-flow diagrams are original school illustrations.
 The wiring diagrams in [lesson-visuals](lesson-visuals/) are original to Mostafa’s Robotics School. The connection rows are drawn from the school’s Uno R3 pin maps and checked against the matching sketches. The breadboard illustrations are original drawings based on the [SparkFun breadboard guide](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/all).
 The following photographs are embedded from repository copies of the original files. Only display width changes. The DHT11 photograph is linked to its original source. CC BY-SA requires credit, a source and license link, and a change notice if adapted. Adaptations must use the same or a compatible license.
 | Embedded photograph | Creator | License | Use |
