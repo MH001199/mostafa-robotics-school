@@ -4,7 +4,7 @@
 
 Start with the Uno R3 and a USB data cable. At the end of this page you should be able to find the pins, select the board and port, and explain how a sketch runs.
 
-<a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_dllu.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Arduino_Uno_dllu.jpg" width="420" alt="Arduino Uno with its long digital and analog headers"></a>
+<a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_dllu.jpg"><img src="../lesson-visuals/Arduino_Uno_dllu.jpg" width="420" alt="Arduino Uno with its long digital and analog headers"></a>
 
 *Arduino Uno with its long digital and analog headers · Dllu · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
 
