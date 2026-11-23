@@ -6,7 +6,7 @@ A solderless breadboard is a reusable board for building a circuit without solde
 
 ## Recognize the board
 
-<a href="https://commons.wikimedia.org/wiki/File:Electronics-White-Breadboard.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Electronics-White-Breadboard.jpg" width="550" alt="Solderless breadboard with terminal holes and side power rails"></a>
+<a href="https://commons.wikimedia.org/wiki/File:Electronics-White-Breadboard.jpg"><img src="../../lesson-visuals/Electronics-White-Breadboard.jpg" width="550" alt="Solderless breadboard with terminal holes and side power rails"></a>
 
 *Solderless breadboard with terminal holes and side power rails · Evan-Amos · Public domain.*
 
@@ -26,7 +26,7 @@ With USB and all other supplies disconnected, use a multimeter in continuity mod
 
 ## Make connections to the Uno
 
-<a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_with_breadboard.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Arduino_Uno_with_breadboard.jpg" width="360" alt="Arduino Uno with a breadboard, jumper wires and resistors"></a>
+<a href="https://commons.wikimedia.org/wiki/File:Arduino_Uno_with_breadboard.jpg"><img src="../../lesson-visuals/Arduino_Uno_with_breadboard.jpg" width="360" alt="Arduino Uno with a breadboard, jumper wires and resistors"></a>
 
 *Arduino Uno with a breadboard, jumper wires and resistors · Thctamm · [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).*
 
